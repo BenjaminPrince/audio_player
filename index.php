@@ -26,7 +26,7 @@
 	
 	<li class="card">
 		<a class="card-image" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.fr%2FLive-Prague-Hans-Zimmer%2Fdp%2FB085HLJ7JZ&psig=AOvVaw27YozarCq7I0e_kyUGef_U&ust=1644334851877000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLiC6ef27fUCFQAAAAAdAAAAABBK" target="_blank" style="background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.fr%2FLive-Prague-Hans-Zimmer%2Fdp%2FB085HLJ7JZ&psig=AOvVaw27YozarCq7I0e_kyUGef_U&ust=1644334851877000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLiC6ef27fUCFQAAAAAdAAAAABBK);" data-image-full="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.fr%2FLive-Prague-Hans-Zimmer%2Fdp%2FB085HLJ7JZ&psig=AOvVaw27YozarCq7I0e_kyUGef_U&ust=1644334851877000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLiC6ef27fUCFQAAAAAdAAAAABBK">
-			<img src="./musique/Hans_zimmer.jpg" alt="let's go" />
+			<img src="./musique/HansZimmerTours2017-Live.jpg" alt="let's go" />
 		</a>
 		<a class="card-description" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.fr%2FLive-Prague-Hans-Zimmer%2Fdp%2FB085HLJ7JZ&psig=AOvVaw27YozarCq7I0e_kyUGef_U&ust=1644334851877000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLiC6ef27fUCFQAAAAAdAAAAABBK" target="_blank">
 			<h2>Hans ZIMMER</h2>
