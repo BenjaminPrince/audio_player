@@ -1,3 +1,11 @@
+<!-- <?php include './utils/pdo.php' ?>
+
+<?php
+//$requete = $db->prepare('SELECT * FROM `Audio`');
+//$requete->execute();
+//$patients = $requete->fetchAll(); //tableau contenant tout ce qu'on a besoin
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +13,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./asset/style.css">
+    <title>player</title>
+    <link rel="stylesheet" href="./asset/player.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
@@ -18,7 +26,7 @@
         <div class="top-bar">
             <i class="material-icons">expand_more</i>
             <span>Now Playing</span>
-            <i class="material-icons">more_horiz</i>
+            <i class="material-icons">more_horiz</i> 
         </div>
         <div class="img-area">
             <img src="./musique/Lofi.jpg" alt="">
@@ -28,9 +36,7 @@
             <p class="artist">Flovry tender spring</p>
         </div>
         <div class="progress-area">
-            <div class="progresse-bar">
-                <span></span>
-            </div>
+            <div class="progress-bar"></div>
 
             <div class="timer">
                 <span class="current">0:20</span>
