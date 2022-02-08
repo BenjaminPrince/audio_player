@@ -1,30 +1,25 @@
 /* css index */
-
-/* Lazy Load Styles */
+ 
+/* style de chargement */
 .card-image {
 	display: block;
-	min-height: 20rem; /* layout hack */
-	background: #fff center center no-repeat;
+	min-height: 20rem; /* mise en page */
+	background: rgb(245, 243, 243) center center no-repeat;
 	background-size: cover;
-	filter: blur(3px); /* blur the lowres image */
+	
 }
 
 .card-image > img {
 	display: block;
 	width: 100%;
-	opacity: 0; /* visually hide the img element */
+	opacity: 0; /* masquer visuellement l'élément image */
 }
-
-.card-image.is-loaded {
-	filter: none; /* remove the blur on fullres image */
-	transition: filter 1s;
-}
-
-
-
 
 /* Layout Styles */
 html, body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -45,23 +40,23 @@ html, body {
 	display: inline-block;
 	width: 90%;
 	max-width: 20rem;
-	margin: 1rem;
+	margin: 5rem;
 	font-size: 1rem;
 	overflow: hidden;
-	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
 	transition: transform 0.1s , box-shadow 0.1s;
 	
 }
 
 .card:hover {
 	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+	box-shadow: 0 0.5em 3rem -1rem #d2691e;
 }
 
 .card-description {
 	display: block;
 	padding: 1em 0.5em;
-	color: #515151;
+	color: #575655;
 	text-decoration: none;
 }
 

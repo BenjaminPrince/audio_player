@@ -17,7 +17,7 @@
 	<li class="card">
 		<a class="card-image" href="https://static.actu.fr/uploads/2020/04/maxresdefault-960x640.jpg" target="_blank" style="background-image: url(https://static.actu.fr/uploads/2020/04/maxresdefault-960x640.jpg);" data-image-full="https://static.actu.fr/uploads/2020/04/maxresdefault-960x640.jpg">
 			<img src="./musique/Lofi.jpg" alt="Lofi" />
-		</a
+</a>
 		<a class="card-description" href="https://static.actu.fr/uploads/2020/04/maxresdefault-960x640.jpg" target="_blank">
 			<h2>Lofi</h2>
 			<p>freestyle</p>
