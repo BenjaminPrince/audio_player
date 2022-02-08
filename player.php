@@ -1,11 +1,3 @@
-<!-- <?php include './utils/pdo.php' ?>
-
-<?php
-//$requete = $db->prepare('SELECT * FROM `Audio`');
-//$requete->execute();
-//$patients = $requete->fetchAll(); //tableau contenant tout ce qu'on a besoin
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,24 +44,53 @@
             <i id="next" class="material-icons">skip_next</i>
             <i id="more-music" class="material-icons">queue_music</i>
         </div>
-
         <div class="music-list">
             <div class="header">
                 <div class="row">
-                    <i class="list material-icons">queue_music</i>
+                    <i class="material-icons">queue_music</i>
                     <span>Music list</span>
                 </div>
                 <i id="close" class="material-icons">close</i>
-            </div>
+            </div> 
             <ul>
-                <div class="row">
-                    <span>HM Surf - Tulips</span>
-                    <p>Audio Library</p>
-                </div>
-                <span class="audio-duration">3:40</span><!-- here li list are coming from js -->
-            </ul>
+                <li>
+                    <div class="row">
+                        <span>HM Surf - Tulips</span>
+                        <p>Audio Library</p>
+                    </div>
+                    <span class="audio-duration">3:40</span>
+                </li>
+                <li>
+                    <div class="row">
+                        <span>HM Surf - Tulips</span>
+                        <p>Audio Library</p>
+                    </div>
+                    <span class="audio-duration">3:40</span>
+                </li>
+                <li>
+                    <div class="row">
+                        <span>HM Surf - Tulips</span>
+                        <p>Audio Library</p>
+                    </div>
+                    <span class="audio-duration">3:40</span>
+                </li>
+                <li>
+                    <div class="row">
+                        <span>HM Surf - Tulips</span>
+                        <p>Audio Library</p>
+                    </div>
+                    <span class="audio-duration">3:40</span>
+                </li>
+                <li>
+                    <div class="row">
+                        <span>HM Surf - Tulips</span>
+                        <p>Audio Library</p>
+                    </div>
+                    <span class="audio-duration">3:40</span>
+                </li> 
+                
+            </ul>   
         </div>
-        
     </div>
 
 
