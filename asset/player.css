@@ -54,7 +54,7 @@ body{
 
 
 .top-bar, .progress-area .timer,
-.controls{
+.controls, .music-list .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -188,9 +188,11 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: whitesmoke;
+    background: white;
     box-shadow: 0px 0px 5px black;
 }
+
+/*bouton play pause*/
 
 .play-pause::before{
     content:"";
@@ -213,3 +215,19 @@ body{
     position: relative;
 }
 
+.music-list{
+    position: absolute;
+    background: var(--white);
+    width: 100%;
+    left: 0;
+    bottom: -55%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+    transition: all 0.15s ease-out;
+  }
+
+  
