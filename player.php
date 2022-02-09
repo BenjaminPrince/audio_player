@@ -1,10 +1,9 @@
-<!-- <?php include './utils/pdo.php' ?>
 
 <?php
 //$requete = $db->prepare('SELECT * FROM `Audio`');
 //$requete->execute();
 //$patients = $requete->fetchAll(); //tableau contenant tout ce qu'on a besoin
-?> -->
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
