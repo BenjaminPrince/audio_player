@@ -21,19 +21,20 @@
             <i class="material-icons">more_horiz</i>
         </div>
         <div class="img-area">
-            <img src="./musique/Lofi.jpg" alt="">
+            <img src="" alt="">
         </div>
         <div class="song-details">
-            <p class="album">LOFI</p>
-            <p class="artist">Flovry tender spring</p>
+            <p class="name"> </p>
+            <p class="artist"> </p>
         </div>
         <div class="progress-area">
             <div class="progress-bar"></div>
 
             <div class="timer">
-                <span class="current">0:20</span>
-                <span class="current">3:40</span>
+                <span class="current">0:00</span>
+                <span class="current">0:00</span>
             </div>
+            <audio class="main-audio" src=""></audio>
         </div>
         <div class="controls">
             <i id="repeat-plist" class="material-icons">repeat</i>
@@ -53,41 +54,7 @@
                 <i id="close" class="material-icons">close</i>
             </div> 
             <ul>
-                <li>
-                    <div class="row">
-                        <span>HM Surf - Tulips</span>
-                        <p>Audio Library</p>
-                    </div>
-                    <span class="audio-duration">3:40</span>
-                </li>
-                <li>
-                    <div class="row">
-                        <span>HM Surf - Tulips</span>
-                        <p>Audio Library</p>
-                    </div>
-                    <span class="audio-duration">3:40</span>
-                </li>
-                <li>
-                    <div class="row">
-                        <span>HM Surf - Tulips</span>
-                        <p>Audio Library</p>
-                    </div>
-                    <span class="audio-duration">3:40</span>
-                </li>
-                <li>
-                    <div class="row">
-                        <span>HM Surf - Tulips</span>
-                        <p>Audio Library</p>
-                    </div>
-                    <span class="audio-duration">3:40</span>
-                </li>
-                <li>
-                    <div class="row">
-                        <span>HM Surf - Tulips</span>
-                        <p>Audio Library</p>
-                    </div>
-                    <span class="audio-duration">3:40</span>
-                </li> 
+            <!-- js ou json -->
                 
             </ul>   
         </div>
@@ -97,8 +64,8 @@
 
 
 
-    <script src="js/music-list.js"></script>
-    <script src="js/script.js"></script>
+    <script src="/asset/music-list.js"></script>
+    <script src="/asset/player.js"></script>
 
 </body>
 
