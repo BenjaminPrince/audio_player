@@ -1,9 +1,8 @@
-let allMusic = 
-[
+let allMusic = [
     {
       name: "LOFI",
       artist: "Flovry tender spring",
-      img: "./musique/Lofi.jpg",
+      img: "Lofi",
       src: "Flovry x tender spring -First Heartbreak"
     },
     {

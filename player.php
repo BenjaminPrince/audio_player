@@ -28,8 +28,9 @@
             <p class="artist"> </p>
         </div>
         <div class="progress-area">
-            <div class="progress-bar"></div>
-
+            <div class="progress-bar">
+                <audio id="main-audio" src=""></audio>
+            </div>
             <div class="timer">
                 <span class="current">0:00</span>
                 <span class="current">0:00</span>
