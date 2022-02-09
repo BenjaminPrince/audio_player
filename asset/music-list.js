@@ -3,7 +3,7 @@ let allMusic =
     {
       name: "LOFI",
       artist: "Flovry tender spring",
-      img: "./musique/Lofi",
+      img: "./musique/Lofi.jpg",
       src: "Flovry x tender spring -First Heartbreak"
     },
     {
