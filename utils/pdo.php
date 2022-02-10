@@ -2,7 +2,7 @@
 
 try {
 
-    $bdd = new PDO('mysql:host=mysql;dbname=Audio;charset=utf8','root', '');
+    $bdd = new PDO('mysql:host=127.0.0.1;dbname=Audio;charset=utf8','root', '');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
