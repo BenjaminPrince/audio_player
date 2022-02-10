@@ -65,8 +65,8 @@
 
 
 
-    <script src="/asset/music-list.js"></script>
-    <script src="/asset/player.js"></script>
+    <script src="asset/music-list.js"></script>
+    <script src="asset/player.js"></script>
 
 </body>
 
