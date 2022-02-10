@@ -14,7 +14,7 @@ closemoreMusic = musicList.querySelector("#close");
 
 console.log(mainAudio)
 
-let musicIndex = 2;
+let musicIndex = 1;
 
 
 window.addEventListener("load", ()=>{
