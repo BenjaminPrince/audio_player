@@ -1,4 +1,7 @@
+<?php
+require_once ('pdo.php');
 
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,32 +13,38 @@
     <title>Album</title>
 </head>
 <body>
-    
+    <header>
 
-<ul class="card-list">
+	</header>
+<div id="album">
+	<ul class="card-list">
 	
 	<li class="card">
-		<a class="card-image" href="/player.php" aria-current="page" target="_blank" style="background-image: url(https://static.actu.fr/uploads/2020/04/maxresdefault-960x640.jpg);" data-image-full="https://static.actu.fr/uploads/2020/04/maxresdefault-960x640.jpg">
+		<a class="card-image" href="player.php" aria-current="page" target="_blank" style="background-image: url(https://static.actu.fr/uploads/2020/04/maxresdefault-960x640.jpg);" data-image-full="https://static.actu.fr/uploads/2020/04/maxresdefault-960x640.jpg">
 			<img src="./musique/Lofi.jpg" alt="Lofi" />
 </a>
-		<a class="card-description" href="/player.php" aria-current="page" target="_blank">home
-			<h2>Lofi</h2>
+		<a class="card-description" href="player.php" aria-current="page" target="_blank">
+			<h2>LOFI</h2>
 			<p>freestyle</p>
 	
 		</a>
 	</li>
 	
 	<li class="card">
-		<a class="card-image" href="/player.php"aria-curent="page" target="_blank" style="background-image: url(https://www.tanikal.com/wp-content/uploads/2017/10/HansZimmerTours2017-Live.jpg);" data-image-full="https://www.tanikal.com/wp-content/uploads/2017/10/HansZimmerTours2017-Live.jpg">
+		<a class="card-image" href="player.php"aria-curent="page" target="_blank" style="background-image: url(https://www.tanikal.com/wp-content/uploads/2017/10/HansZimmerTours2017-Live.jpg);" data-image-full="https://www.tanikal.com/wp-content/uploads/2017/10/HansZimmerTours2017-Live.jpg">
 			<img src="./musique/HansZimmerTours2017-Live.jpg" alt="Hans ZIMMER" />
 		</a>
-		<a class="card-description" href="/player.php" target="_blank">
+		<a class="card-description" href="player.php" target="_blank">
 			<h2>Hans ZIMMER</h2>
 			<p>Live in prague</p>
 		</a>
 	</li>
 	<audio src=""></audio>
-</ul>
-<script src="./asset/index.js"></script>
+	</ul>
+</div> <!--contenu généré par js -->
+
+<footer>
+
+</footer>
 </body>
 </html>
