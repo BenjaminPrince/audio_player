@@ -28,10 +28,10 @@ $result = $Pdotement->fetchAll(PDO::FETCH_ASSOC);
 		<ul class="card-list">
 			<?php foreach ($result as $results) { ?>
 				<li class="card">
-					<a class="card-image" href="player.php" aria-current="page" target="_blank">
+					<a class="card-image" href="player.php?id=<?=$results?>" aria-current="page" target="_blank">
 						<img src="./musique/<?= $results["image"] ?>" />
 					</a>
-					<a class="card-description" href="player.php" aria-current="page" target="_blank">
+					<a class="card-description" href="player.php?id=<?=$results?>" aria-current="page" target="_blank">
 						<h2><?= $results["artiste"] ?></h2>	
 					</a><?php 
 					}
