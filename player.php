@@ -1,5 +1,5 @@
 <?php
-require_once ('./utils/pdo.php');
+include ('./utils/pdo.php');
 ?> 
 <!DOCTYPE html>
 <html lang="en">
