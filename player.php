@@ -1,3 +1,6 @@
+<?php
+require_once ('./utils/pdo.php');
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
