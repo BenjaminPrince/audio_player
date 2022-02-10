@@ -86,10 +86,45 @@ prevBtn.addEventListener("click", ()=>{
     prevMusic(); //appelle la function music précédente//
 });
 
-//barre de temps de la chanson
+//barre de temps de la chanson//
+ 
 mainAudio;addEventListener("timeupdate", (e)=>{
+    console.log(e);
     const currentTime = e.target.currentTime; //temps en cours de la chanson//
     const duration = e.target.duration; //temps total de la chanson//
     let progressWidth = (currentTime / duration) * 100;
     progressBar.style.width = `${progressWidth}%`;
+
+    mainAudio;addEventListener("loadeddata ", (e)=>{
+    let musicCurrentTime = contener.querySelector(".current"),
+    musicDuration = contener.querySelector(".duration");
+
+    //update song total duration//
+     let audioDuration = mainAudio.duration;
+     let totalMin = Math.floor(audioDuration / 60);
+     let totalSec = Math.floor(audioDuration % 60);
+     if(totalSec < 10){  // ajoute 0 si seconde inférieur à 10//
+         totalSec = `0${totalSec}`;
+     }
+     musicDuration.innerText = `${totalMin}:${totalSec}`;
+
+    });
+
+     let currentMin = Math.floor(currentTime / 60);
+     let currentSec = Math.floor(currentTime % 60);
+     if(currentSec < 10){  // ajoute 0 si seconde inférieur à 10//
+         currentSec = `0${currentSec}`;
+     }
+     musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
+
 });
+
+//accord de la progressBar avec le temps de la chanson//
+
+progressBar.addEventListener("click",()=>{
+    let progressWidthval = progressBar.clientWidth;
+    let clikedOffSetX = e.offSetX;
+    let songDuration = mainAudio.duration;
+
+    mainAudio.currentTime = (clikedOffSetX / progressWidthval) *songDuration;
+})

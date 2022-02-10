@@ -46,7 +46,7 @@ $result = $Pdotement->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <div class="timer">
                 <span class="current">0:00</span>
-                <span class="current">0:00</span>
+                <span class="duration"></span>
             </div>
             <audio class="main-audio" src=""></audio>
         </div>
