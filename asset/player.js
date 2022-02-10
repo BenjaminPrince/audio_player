@@ -88,14 +88,14 @@ prevBtn.addEventListener("click", ()=>{
 
 //barre de temps de la chanson//
  
-mainAudio;addEventListener("timeupdate", (e)=>{
-    console.log(e);
+mainAudio.addEventListener("timeupdate", (e)=>{
+   // console.log(e);
     const currentTime = e.target.currentTime; //temps en cours de la chanson//
     const duration = e.target.duration; //temps total de la chanson//
     let progressWidth = (currentTime / duration) * 100;
     progressBar.style.width = `${progressWidth}%`;
 
-    mainAudio;addEventListener("loadeddata ", (e)=>{
+    mainAudio.addEventListener("loadeddata ", (e)=>{
     let musicCurrentTime = contener.querySelector(".current"),
     musicDuration = contener.querySelector(".duration");
 
