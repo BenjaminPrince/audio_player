@@ -86,8 +86,10 @@ prevBtn.addEventListener("click", ()=>{
     prevMusic(); //appelle la function music précédente//
 });
 
-//barre de temps de la chanson
+//barre de temps de la chanson//
+ 
 mainAudio;addEventListener("timeupdate", (e)=>{
+    console.log(e);
     const currentTime = e.target.currentTime; //temps en cours de la chanson//
     const duration = e.target.duration; //temps total de la chanson//
     let progressWidth = (currentTime / duration) * 100;
