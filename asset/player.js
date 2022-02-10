@@ -48,12 +48,12 @@ function pauseMusic(){
     mainAudio.pause();
 }
 
-//play ans pause//
+//play and pause//
 
 playPauseBtn.addEventListener("click",()=>{
     const isMusicPaused = contener.classList.contains("paused");
     isMusicPaused ? pauseMusic() : playMusic();
 });
 
-
+nextBtn.addEventListener("click",)
 
