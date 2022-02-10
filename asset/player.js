@@ -1,5 +1,5 @@
 const contener = document.querySelector(".contener"),
-musicImg = contener.querySelector(".img-area img"),
+musicImg = contener.querySelector(".img-area img"), //mettre le sql
 musicName = contener.querySelector(".song-details .name"),
 musicArtist = contener.querySelector(".song-details .artist"),
 mainAudio = contener.querySelector(".progress-area #main-audio"), 
@@ -8,13 +8,13 @@ prevBtn = contener.querySelector("#prev"),
 nextBtn = contener.querySelector("#next"),
 progressArea = contener.querySelector(".progress-area"),
 progressBar = progressArea.querySelector(".progress-bar"),
-musicList = contener.querySelector(".music-list"),
+musicList = contener.querySelector(".music-list"), //mettre le sql ici
 moreMusicBtn = contener.querySelector("#more-music"),
 closemoreMusic = musicList.querySelector("#close");
 
 console.log(mainAudio)
 
-let musicIndex = 2;
+let musicIndex = 1;
 
 
 window.addEventListener("load", ()=>{
@@ -31,7 +31,7 @@ function loadMusic(indexNumb) {
     musicName.innerText = allMusic[indexNumb - 1].name;
     musicArtist.innerText = allMusic[indexNumb - 1].artist;
     musicImg.src = `musique/${allMusic[indexNumb - 1].img}.jpg`;
-    mainAudio.src = `musique/${allMusic[indexNumb - 1].src}.mp3`;//marche pas a voir
+    mainAudio.src = `musique/${allMusic[indexNumb - 1].src}.mp3`;
     
 }
 

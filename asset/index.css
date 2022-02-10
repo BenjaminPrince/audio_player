@@ -2,17 +2,18 @@
  
 /* style de chargement */
 .card-image {
-	display: block;
-	min-height: 20rem; /* mise en page */
+	display: flex;
+	height: 20em; /* mise en page */
 	background: rgb(245, 243, 243) center center no-repeat;
 	background-size: cover;
 	
 }
 
 .card-image > img {
-	display: block;
 	width: 100%;
-	
+  height: 100%;
+	object-fit: cover ;
+
 }
 
 /* Layout Styles */
