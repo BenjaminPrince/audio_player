@@ -12,7 +12,7 @@ musicList = contener.querySelector(".music-list"), //mettre le sql ici
 moreMusicBtn = contener.querySelector("#more-music"),
 closemoreMusic = musicList.querySelector("#close");
 
-console.log(mainAudio)
+//console.log(mainAudio)
 
 let musicIndex = 1;
 
@@ -95,9 +95,10 @@ mainAudio.addEventListener("timeupdate", (e)=>{
     let progressWidth = (currentTime / duration) * 100;
     progressBar.style.width = `${progressWidth}%`;
 
-    mainAudio.addEventListener("loadeddata ", (e)=>{
     let musicCurrentTime = contener.querySelector(".current"),
     musicDuration = contener.querySelector(".duration");
+    
+    mainAudio.addEventListener("loadeddata ", (e)=>{
 
     //update song total duration//
      let audioDuration = mainAudio.duration;
@@ -116,15 +117,67 @@ mainAudio.addEventListener("timeupdate", (e)=>{
          currentSec = `0${currentSec}`;
      }
      musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
-
+    
+    
 });
 
 //accord de la progressBar avec le temps de la chanson//
 
-progressBar.addEventListener("click",()=>{
-    let progressWidthval = progressBar.clientWidth;
+progressArea.addEventListener("click",()=>{
+    let progressWidthval = progressArea.clientWidth;
     let clikedOffSetX = e.offSetX;
     let songDuration = mainAudio.duration;
 
     mainAudio.currentTime = (clikedOffSetX / progressWidthval) *songDuration;
+    playMusic();
+
+});
+
+
+const repeatBtn = contener.querySelector("#repeat-plist");
+repeatBtn.addEventListener("ckick", ()=>{
+    let getText = repeatBtn.innerText;
+
+    switch(getText){
+        case "repeat":
+            repeatBtn.innerText = "repeat_one";
+            repeatBtn.setAttribute("title", "Song looped");
+            break; 
+        case "repeat_once":
+            repeatBtn.innerText = "shuffle";
+            repeatBtn.setAttribute("title", "Playback shuffle");
+            break; 
+        case "shuffle":
+            repeatBtn.innerText = "repeat";
+            repeatBtn.setAttribute("title", "playlist looped");
+            break;
+            
+    }
+});
+
+
+mainAudio.addEventListener("ended", ()=>{
+    let getText = repeatBtn.innerText;
+
+    switch(getText){
+        case "repeat":
+            nextMusic();
+            break; 
+        case "repeat_once":
+            mainAudio.currentTime = 0;
+            loadMusic(musicIndex);
+            playMusic();
+            break; 
+        case "shuffle":
+           let randIndex = Math.floor((Math.random() * allMusic.length) + 1); 
+           do{
+               randIndex = Math.floor((Math.random()  *allMusic.length) + 1);
+           } while(musicIndex = randIndex);
+           musicIndex = randIndex;
+           loadMusic(musicIndex);
+           playMusic();
+            break;
+            
+    }
+    
 })
