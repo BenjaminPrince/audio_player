@@ -12,7 +12,7 @@
 .card-image > img {
 	display: block;
 	width: 100%;
-	opacity: 0; /* masquer visuellement l'élément image */
+	
 }
 
 /* Layout Styles */
