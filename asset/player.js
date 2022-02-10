@@ -48,6 +48,26 @@ function pauseMusic(){
     mainAudio.pause();
 }
 
+//fonction musique suivante //
+
+function nextMusic() {
+    //on incrémente de 1//
+    musicIndex++;
+    musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
+    loadMusic(musicIndex);
+    playMusic();
+}
+
+// fonction musique précédente//
+
+function prevMusic() {
+    //on décrémente de 1 //
+    musicIndex--;
+    musicIndex <1 ? musicIndex = allMusic.length : musicIndex = musicIndex;
+    loadMusic(musicIndex);
+    playMusic();
+}
+
 //play and pause//
 
 playPauseBtn.addEventListener("click",()=>{
@@ -55,5 +75,21 @@ playPauseBtn.addEventListener("click",()=>{
     isMusicPaused ? pauseMusic() : playMusic();
 });
 
-nextBtn.addEventListener("click",)
+//event btn music suivante //
 
+nextBtn.addEventListener("click", ()=>{
+    nextMusic(); //appelle la function music suivante//
+});
+
+//event btn music précédente//
+prevBtn.addEventListener("click", ()=>{
+    prevMusic(); //appelle la function music précédente//
+});
+
+//barre de temps de la chanson
+mainAudio;addEventListener("timeupdate", (e)=>{
+    const currentTime = e.target.currentTime; //temps en cours de la chanson//
+    const duration = e.target.duration; //temps total de la chanson//
+    let progressWidth = (currentTime / duration) * 100;
+    progressBar.style.width = `${progressWidth}%`;
+});
