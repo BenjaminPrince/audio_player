@@ -8,7 +8,7 @@ prevBtn = contener.querySelector("#prev"),
 nextBtn = contener.querySelector("#next"),
 progressArea = contener.querySelector(".progress-area"),
 progressBar = progressArea.querySelector(".progress-bar"),
-musicList = contener.querySelector(".music-list"), //mettre le sql ici
+musicList = contener.querySelector(".music-list"), 
 moreMusicBtn = contener.querySelector("#more-music"),
 closemoreMusic = musicList.querySelector("#close");
 

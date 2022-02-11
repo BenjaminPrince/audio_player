@@ -1,6 +1,20 @@
 <?php
 include ('./utils/pdo.php');
 ?> 
+<!-- <?php 
+//$jesuisunid = $_GET['id'] ;
+//$pdo = "SELECT * FROM chanson WHERE album_id = ?";
+//$Pdostement = $bdd->prepare($pdo);
+//$result = $Pdostement->execute([$jesuisunid]);
+//$result = $Pdostement->fetchAll(PDO::FETCH_ASSOC);
+?>
+<?php
+//$unid = $_GET['id'] ;
+//$pdo = "SELECT * FROM album WHERE id = ?";
+//$Pdostement = $bdd->prepare($pdo);
+//$album= $Pdostement->execute([$unid]);
+//$album= $Pdostement->fetch(PDO::FETCH_ASSOC);
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,21 +38,22 @@ include ('./utils/pdo.php');
             <i class="material-icons">more_horiz</i>
         </div>
         <div class="img-area">
-            <img src="" alt="">
+            <img src="./musique/<?=$album['image']?>"> 
+
         </div>
         <div class="song-details">
-            <p class="name"> </p>
-            <p class="artist"> </p>
+            <p class="name"><?=$result[0]['titre']?> </p>
+            <p class="artist"><?=$album['artiste']?> </p>
         </div>
         <div class="progress-area">
             <div class="progress-bar">
-                <audio id="main-audio" src=""></audio>
+                <audio id="main-audio" src="./musique/<?=$result['recup']?>"></audio>
             </div>
             <div class="timer">
                 <span class="current">0:00</span>
-                <span class="duration">2:37</span>
+                <span class="duration"></span>
             </div>
-            <audio class="main-audio" src=""></audio>
+          
         </div>
         <div class="controls">
             <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
@@ -59,7 +74,6 @@ include ('./utils/pdo.php');
             </div> 
             <ul>
             <!-- js ou json -->
-                
             </ul>   
         </div>
     </div>
@@ -68,8 +82,8 @@ include ('./utils/pdo.php');
 
 
 
-    <script src="asset/music-list.js"></script>
-    <script src="asset/player.js"></script>
+    <script src="asset/music-list.js"></script>  <!--remplacer par un dossiser php avec fetch-->
+    <script src="asset/player.js"></script> 
 
 </body>
 
