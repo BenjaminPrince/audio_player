@@ -12,7 +12,7 @@ musicList = contener.querySelector(".music-list"), //mettre le sql ici
 moreMusicBtn = contener.querySelector("#more-music"),
 closemoreMusic = musicList.querySelector("#close");
 
-console.log(mainAudio)
+//console.log(mainAudio)
 
 let musicIndex = 1;
 
@@ -86,10 +86,51 @@ prevBtn.addEventListener("click", ()=>{
     prevMusic(); //appelle la function music précédente//
 });
 
-//barre de temps de la chanson
-mainAudio;addEventListener("timeupdate", (e)=>{
+//barre de temps de la chanson//
+ 
+mainAudio.addEventListener("timeupdate", (e)=>{
+   // console.log(e);
     const currentTime = e.target.currentTime; //temps en cours de la chanson//
     const duration = e.target.duration; //temps total de la chanson//
     let progressWidth = (currentTime / duration) * 100;
     progressBar.style.width = `${progressWidth}%`;
+
+    let musicCurrentTime = contener.querySelector(".current"),
+    musicDuration = contener.querySelector(".duration");
+    
+    mainAudio.addEventListener("loadeddata ", (e)=>{
+
+    //update song total duration//
+     let audioDuration = mainAudio.duration;
+     let totalMin = Math.floor(audioDuration / 60);
+     let totalSec = Math.floor(audioDuration % 60);
+     if(totalSec < 10){  // ajoute 0 si seconde inférieur à 10//
+         totalSec = `0${totalSec}`;
+     }
+     musicDuration.innerText = `${totalMin}:${totalSec}`;
+
+    });
+
+     let currentMin = Math.floor(currentTime / 60);
+     let currentSec = Math.floor(currentTime % 60);
+     if(currentSec < 10){  // ajoute 0 si seconde inférieur à 10//
+         currentSec = `0${currentSec}`;
+     }
+     musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
+    
+    
 });
+
+//accord de la progressBar avec le temps de la chanson//
+
+progressArea.addEventListener("click",(e)=>{
+    let progressWidthval = progressArea.clientWidth;
+    let clikedOffSetX = e.offSetX;
+    let songDuration = mainAudio.duration;
+
+    mainAudio.currentTime = (clikedOffSetX / progressWidthval) *songDuration;
+    playMusic();
+
+});
+
+
