@@ -74,7 +74,6 @@ include ('./utils/pdo.php');
             </div> 
             <ul>
             <!-- js ou json -->
-                
             </ul>   
         </div>
     </div>
