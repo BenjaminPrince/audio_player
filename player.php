@@ -2,13 +2,7 @@
 include ('./utils/pdo.php');
 ?> 
 
-<?php 
-$jesuisunid = $_GET['id'] ;
-$pdo = "SELECT * FROM chanson WHERE album_id = $jesuisunid";
-$Pdotement = $bdd->prepare($pdo);
-$result = $Pdotement->execute($jesuisunid);
-$result = $Pdotement->fetchAll(PDO::FETCH_ASSOC);
-?>
+
 
 
 <!DOCTYPE html>
