@@ -12,7 +12,7 @@ musicList = contener.querySelector(".music-list"), //mettre le sql ici
 moreMusicBtn = contener.querySelector("#more-music"),
 closemoreMusic = musicList.querySelector("#close");
 
-console.log(mainAudio)
+//console.log(mainAudio)
 
 let musicIndex = 1;
 
@@ -88,16 +88,17 @@ prevBtn.addEventListener("click", ()=>{
 
 //barre de temps de la chanson//
  
-mainAudio;addEventListener("timeupdate", (e)=>{
-    console.log(e);
+mainAudio.addEventListener("timeupdate", (e)=>{
+   // console.log(e);
     const currentTime = e.target.currentTime; //temps en cours de la chanson//
     const duration = e.target.duration; //temps total de la chanson//
     let progressWidth = (currentTime / duration) * 100;
     progressBar.style.width = `${progressWidth}%`;
 
-    mainAudio;addEventListener("loadeddata ", (e)=>{
     let musicCurrentTime = contener.querySelector(".current"),
     musicDuration = contener.querySelector(".duration");
+    
+    mainAudio.addEventListener("loadeddata ", (e)=>{
 
     //update song total duration//
      let audioDuration = mainAudio.duration;
@@ -116,15 +117,20 @@ mainAudio;addEventListener("timeupdate", (e)=>{
          currentSec = `0${currentSec}`;
      }
      musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
-
+    
+    
 });
 
 //accord de la progressBar avec le temps de la chanson//
 
-progressBar.addEventListener("click",()=>{
-    let progressWidthval = progressBar.clientWidth;
+progressArea.addEventListener("click",(e)=>{
+    let progressWidthval = progressArea.clientWidth;
     let clikedOffSetX = e.offSetX;
     let songDuration = mainAudio.duration;
 
     mainAudio.currentTime = (clikedOffSetX / progressWidthval) *songDuration;
-})
+    playMusic();
+
+});
+
+

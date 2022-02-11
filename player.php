@@ -1,16 +1,6 @@
 <?php
 include ('./utils/pdo.php');
 ?> 
-
-<?php 
-//$jesuisunid = $_GET['id'] ;
-//$pdo = "SELECT * FROM chanson WHERE album_id = $jesuisunid";
-//$Pdotement = $bdd->prepare($pdo);
-//$result = $Pdotement->execute($jesuisunid);
-//$result = $Pdotement->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,12 +36,12 @@ include ('./utils/pdo.php');
             </div>
             <div class="timer">
                 <span class="current">0:00</span>
-                <span class="duration"></span>
+                <span class="duration">2:37</span>
             </div>
             <audio class="main-audio" src=""></audio>
         </div>
         <div class="controls">
-            <i id="repeat-plist" class="material-icons">repeat</i>
+            <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
             <i id="prev" class="material-icons">skip_previous</i>
             <div class="play-pause">
                 <i class="material-icons">play_arrow</i>
