@@ -51,7 +51,7 @@ include ('./utils/pdo.php');
             </div>
             <div class="timer">
                 <span class="current">0:00</span>
-                <span class="duration">2:37</span>
+                <span class="duration"></span>
             </div>
           
         </div>
@@ -83,7 +83,7 @@ include ('./utils/pdo.php');
 
 
 
-    <script src="asset/music-list.js"></script> 
+    <script src="asset/music-list.js"></script>  <!--remplacer par un dossiser php avec fetch-->
     <script src="asset/player.js"></script> 
 
 </body>
