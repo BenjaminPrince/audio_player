@@ -2,7 +2,7 @@
 
 try {
 
-    $bdd = new PDO('mysql:host=127.0.0.1;dbname=Audio;charset=utf8','root', '');
+    $bdd = new PDO('mysql:host=141.94.22.233;dbname=BenjaminPrince_audio;charset=utf8','BenjaminPrince', 'PrinceBenjamin07');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
